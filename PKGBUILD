@@ -3,7 +3,7 @@
 _pkgname=anythingllm
 
 pkgname="${_pkgname}"-appimage
-pkgver=1.7.8
+pkgver=1.8.1
 pkgrel=1
 pkgdesc="Any LLM, unlimited documents, and fully private. All on your desktop."
 arch=('x86_64')
@@ -14,7 +14,7 @@ options=(!strip !debug)
 _appimage="${pkgname}-${pkgver}.AppImage"
 source_x86_64=("${_appimage}::https://cdn.anythingllm.com/latest/AnythingLLMDesktop.AppImage")
 noextract=("${_appimage}")
-sha256sums_x86_64=('3f9b88628030c1f02fe1eb310e571ff116989030c43dc04c50e2c67d2c47e922')
+sha256sums_x86_64=('SKIP')
 appname="anythingllm-desktop"
 
 prepare() {
