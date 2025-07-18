@@ -1,0 +1,31 @@
+name: Check Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+  push:
+    branches:
+      - master
+
+jobs:
+  check_update:
+    name: Check Update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Check Update
+        shell: bash
+        id: check_version
+        run: |
+          chmod +x ./.github/.check_version.sh
+          ./.github/.check_version.sh
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update version to ${{ steps.check_version.outputs.REPO_VERSION }}"
+          branch: ${{ github.ref }}
+          file_pattern: "PKGBUILD .SRCINFO"
