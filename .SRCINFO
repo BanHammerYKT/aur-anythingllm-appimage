@@ -1,6 +1,6 @@
 pkgbase = anythingllm-appimage
 	pkgdesc = Any LLM, unlimited documents, and fully private. All on your desktop.
-	pkgver = 1.8.4
+	pkgver = 1.8.5
 	pkgrel = 1
 	url = https://useanything.com/
 	arch = x86_64
@@ -8,10 +8,10 @@ pkgbase = anythingllm-appimage
 	depends = zlib
 	depends = hicolor-icon-theme
 	depends = fuse2
-	noextract = anythingllm-appimage-1.8.4.AppImage
+	noextract = anythingllm-appimage-1.8.5.AppImage
 	options = !strip
 	options = !debug
-	source_x86_64 = anythingllm-appimage-1.8.4.AppImage::https://cdn.anythingllm.com/latest/AnythingLLMDesktop.AppImage
+	source_x86_64 = anythingllm-appimage-1.8.5.AppImage::https://cdn.anythingllm.com/latest/AnythingLLMDesktop.AppImage
 	sha256sums_x86_64 = SKIP
 
 pkgname = anythingllm-appimage
