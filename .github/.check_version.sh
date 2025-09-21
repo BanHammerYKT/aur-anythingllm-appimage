@@ -10,7 +10,7 @@ REPO_FORMATTED_VERSION=""
 getformattedversion() {
     version=$1
     IFS='.-' read -r -a parts <<< "$version"
-    formatted_version=$(printf "%02d%02d%02d%02d" "${parts[0]:-0}" "${parts[1]:-0}" "${parts[2]:-0}" "${parts[3]:-0}")
+    formatted_version=$(printf "%d%02d%02d%02d" "${parts[0]:-0}" "${parts[1]:-0}" "${parts[2]:-0}" "${parts[3]:-0}")
     echo "$formatted_version"
 }
 
